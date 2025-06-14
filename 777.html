@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fitness blog: Savjeti za trening i prehranu.">
+  <meta name="keywords" content="fitness,trening, prehrana, zdravlje, motivacija">
+  <meta name="author" content="Ime Autora">
+  <title>Fitness by Ana</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #fff;
+      background: #111;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #A7A0E8;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      color: #6709a5;
+      font-size: 30px;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 1rem;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #A7A0E8;
+      cursor: pointer;
+    }
+
+    .hero {
+      background-image: url('naslovnica 1.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 800px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .hero h2 {
+      font-size: 50px;
+      color: #fff;
+      animation: treptanje 3s infinite;
+    }
+
+    @keyframes treptanje {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .dugme {
+      background-color: #d95887;
+      color: white;
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    .dugme:hover {
+      background-color: #EC7EA7;
+      transform: scale(1.1);
+    }
+
+    .section {
+      background: #c7c3eb;
+      margin: 1rem 0;
+      padding: 2rem;
+    }
+
+    .section h2 {
+      color: #010103;
+      margin-bottom: 1rem;
+    }
+
+    .sadrzaj {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 2rem 0;
+    }
+
+    .tekst {
+      flex: 1;
+      font-size: 1.3em;
+      color: #000;
+    }
+
+    .slika {
+      flex: 1;
+    }
+
+    .slika img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .gallery img {
+      width: 200px;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .kontakt-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      background: #c7c3eb;
+      padding: 2rem;
+      color: white;
+      border-radius: 10px;
+      justify-content: center;
+    }
+
+    .kontakt-section img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 5px;
+    }
+
+    form button {
+      background: #675fb3;
+      color: white;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+
+    footer a {
+      color: #a50990;
+      margin: 0 0.5rem;
+    }
+
+    /* Tablet responsive */
+    @media (max-width: 768px) {
+      .sadrzaj, .kontakt-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div style="display: flex; align-items: center; gap: 20px;">
+      <img src="logo.png" alt="Logo" style="width: 50px; height: 50px; border-radius: 100%;">
+      <h1>Fitness by Ana</h1>
+    </div>
+    <nav>
+      <a href="#">Početna</a>
+      <a href="#O-nama">O nama</a>
+      <a href="#Prehrana">Prehrana</a>
+      <a href="#Trening">Trening</a>
+      <a href="#Kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h2>Započni svoju fitness avanturu već danas!</h2>
+      <a href="#O-nama" class="dugme">Saznaj više</a>
+    </div>
+  </section>
+
+  <section id="O-nama" class="section">
+    <h2>O nama</h2>
+    <div class="sadrzaj">
+      <div class="tekst">
+        <h3>Upoznaj svoju novu trenericu!</h3>
+        <p>Spremna te voditi kroz svaki korak tvog fitness putovanja – s motivacijom, znanjem i osmijehom! Tvoja nova trenerica nije tu samo da ti pokaže vježbe, već da ti pomogne izgraditi zdrave navike, ojača tvoje samopouzdanje i podrži te kad je najpotrebnije. Zajedno, korak po korak, prema snažnijoj, zdravijoj verziji tebe!</p>
+      </div>
+      <div class="slika">
+        <img src="trenerica.jpg" alt="Trenerica">
+      </div>
+    </div>
+  </section>
+
+  <section id="Prehrana" class="section">
+    <h2>Prehrana</h2>
+    <div class="sadrzaj">
+      <div class="slika">
+        <img src="hrana.jpg" alt="Zdrava hrana">
+      </div>
+      <div class="tekst">
+        <h3>Zdrava prehrana, snažan život!</h3>
+        <p> Zdrava prehrana temelj je snažnog i uravnoteženog života. Unošenjem raznolikih, prirodnih i nutritivno bogatih namirnica jačamo imunitet, poboljšavamo koncentraciju i osiguravamo energiju za svakodnevne izazove. Pravilna prehrana ne znači odricanje, već mudre izbore koji dugoročno doprinose zdravlju tijela i duha. Biraj zdravo – živi snažno!</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="Trening" class="section">
+    <h2>Trening</h2>
+    <div class="gallery">
+      <div style="background-color: #E4DBF1; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px black; width: 250px;">
+        <img src="bb.jpg" alt="Online treninzi">
+        <h3 style="padding: 1rem;">Online treninzi</h3>
+        <a href="https://budi-fit.hr/online-osobni-trener/zdrav-zivot/pilates" style="color: #675fb3; text-decoration: none;">📖 Pročitaj više</a>
+      </div>
+      <div style="background-color: #E4DBF1; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px black; width: 250px;">
+        <img src="ind.jpg" alt="Individualni treninzi">
+        <h3 style="padding: 1rem;">Individualni treninzi</h3>
+        <a href="https://budi-fit.hr/treninzi/fitness/individualni" style="color: #675fb3; text-decoration: none;">📖 Pročitaj više</a>
+      </div>
+      <div style="background-color: #E4DBF1; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 10px black; width: 250px;">
+        <img src="druga.jpg" alt="Grupni treninzi">
+        <h3 style="padding: 1rem;">Grupni treninzi</h3>
+        <a href="https://budi-fit.hr/treninzi/fitness/grupni" style="color: #675fb3; text-decoration: none;">📖 Pročitaj više</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="Kontakt" class="kontakt-section">
+    <div style="flex: 1;">
+      <img src="zadnja.jpg" alt="Kontakt slika">
+    </div>
+    <div style="flex: 1;">
+      <p style="font-size: 30px;">Spremna <i>preobraziti</i> svoje tijelo & <i>promijeniti</i> svoj život?</p>
+      <h2>Kontakt</h2>
+      <form>
+        <input type="text" placeholder="Vaše ime" required>
+        <input type="email" placeholder="Vaš email" required>
+        <textarea placeholder="Vaša poruka" rows="5" required></textarea>
+        <button type="submit">Pošalji</button>
+      </form>
+      <p>Email: <a href="mailto:fitnessbyana@gmail.com" style="color:#fff;">fitnessbyana@gmail.com</a></p>
+      <p>📞 023 456 789</p>
+      <p>📍 Ulica Zdravlja 15, 23000 Zadar</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fitness by Ana</p>
+  </footer>
+
+</body>
+</html>
